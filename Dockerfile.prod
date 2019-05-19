@@ -1,0 +1,8 @@
+ARG tag
+FROM local-builder:${tag} as builder
+
+FROM nginx:1.16.0-alpine
+ARG tag
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
