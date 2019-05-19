@@ -1,5 +1,3 @@
-# react-with-trivy
-
 ## What's this?
 
 This repository is sample repository for scan security vulnerabilities for frontend.
