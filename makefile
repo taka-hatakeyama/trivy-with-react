@@ -12,5 +12,5 @@ build:
 
 ci-scan:
 	# if only want scan set --exit-code 0
-	trivy --exit-code 1 --severity HIGH,CRITICAL  --quiet --auto-refresh local-builder:$(TAG)
+	trivy --exit-code 1 --quiet --auto-refresh local-builder:$(TAG)
 	trivy --exit-code 0 --quiet --auto-refresh built:$(TAG)
