@@ -17,7 +17,7 @@ jobs:
           name: Install latest trivy
           command: |
             VERSION=$(
-              curl -I https://github.com/tomoyamachi/trivy/releases/latest | \
+              curl -I https://github.com/knqyf263/trivy/releases/latest | \
               grep -o '/tag/v[0-9]\+.[0-9]\+\.[0-9]\+' | \
               sed -E 's:/tag/v([0-9\.]+):\1:'
             )
