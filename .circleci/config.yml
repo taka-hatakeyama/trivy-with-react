@@ -16,11 +16,6 @@ jobs:
       - run:
           name: Install latest trivy
           command: |
-            VERSION=$(
-              curl --silent "https://api.github.com/repos/aquasecurity/trivy/releases/latest" | \
-              grep -o '/tag/v[0-9]\+.[0-9]\+\.[0-9]\+' | \
-              sed -E 's:/tag/v([0-9\.]+):\1:'
-            )
             wget https://github.com/aquasecurity/trivy/releases/download/v0.4.0/trivy_0.4.0_Linux-64bit.tar.gz
             tar zxvf trivy_0.4.0_Linux-64bit.tar.gz
             mv trivy /usr/local/bin
